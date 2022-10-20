@@ -3,8 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>LifeSpot</title>
+    <link href="Static/CSS/index.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <h1>LifeSpot — прямые трансляции с улиц</h1>
+    <!--Хедер страницы находится сразу над тегом body-->
+    <!--Заголовок страницы-->
+    <header>
+        <!--Заголовок страницы-->
+        <h1>LifeSpot - прямые трансляции с улиц</h1>
+        <!--Параграф-->
+        <p>Покажем, что происходит прямо сейчас</p>
+    </header>
+    <!--
+    <aside>
+        <nav class="navbar">
+            <ul>
+                <li>О проекте</li>
+                <li>Все трансляции</li>
+            </ul>
+        </nav>
+    </aside>
+        -->
+    <!--Сайд-бар страницы-->
+    <aside id="sidebar">
+        <div class="navbar">
+            <p>Все трансляции</p>
+            <p>О проекте</p>
+        </div>
+    </aside>
+
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wCcMcaiRbhM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h3 class="video-title">Санкт-Петербург, Невский проспект</h3>
+    </div>
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/srlpC5tmhYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h3 class="video-title">Нью-Йорк, Брайант-парк</h3>
+    </div>
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/JplMzss6_YE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <h3 class="video-title">Лондон, движущаяся камера из окна автобуса</h3>
+    </div>
+    <!--Футер страницы находится под основной частью (body)-->
+    <footer>
+        <h1>LifeSpot - все права защищены</h1>
+        <p>Связаться с нами: contact@lifespot.ru</p>
+    </footer>
 </body>
+
 </html>
