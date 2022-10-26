@@ -1,35 +1,65 @@
-﻿/* Свойства стиля элемента. Подробнее о них в модуле по CSS */
-        .video-container {
-            display: inline-block;
-            padding-left: 1%;
-        }
+﻿/* Простые селекторы*/
+.video-container {
+    display: inline-block;
+    padding-left: 1%;
+    padding-top: 1%;
+}
 
-        .navbar {
-            color: darkgray;
-            padding-left: 15%;
-        }
+.navbar {
+    color: darkgray;
+    padding-left: 15%;
+}
 
-        header {
-            padding-left: 1%;
-        }
+header {
+    padding-left: 1%;
+    padding-top: 1.2%;
+}
 
-        footer {
-            position: absolute;
-            bottom: 0;
-        }
+footer {
+    position: absolute;
+    bottom: 0;
+    font-size: medium;
+    line-height: 0.66em;
+    color: dimgrey;
+}
 
-        aside {
-            height: 100%; /* Высота в полный размер. Этот параметр можно убрать, если вы хотите выставлять высоту автоматически */
-            width: 10%;
-            position: absolute; /* Фиксированная позиция сайд-бара. Так он будет оставаться на месте при скроллинге */
-            z-index: 1; /* Сайд-бар будет поверх остальных элементов */
-            top: 0; /* Сайдбар будет в самой верхней части страницы */
-            left: 0;
-            background-color: #111; /* Черный цвет фона (задан в виде кода) */
-            overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
-            padding-top: 20px;
-        }
+aside {
+    height: 100%; /* Высота в полный размер. Этот параметр можно убрать, если вы хотите выставлять высоту автоматически */
+    width: 10%;
+    position: absolute; /* Фиксированная позиция сайд-бара. Так он будет оставаться на месте при скроллинге */
+    z-index: 1; /* Сайд-бар будет поверх остальных элементов */
+    top: 0; /* Сайдбар будет в самой верхней части страницы */
+    left: 0;
+    background-color: #111; /* Черный цвет фона (задан в виде кода) */
+    overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
+    padding-top: 2%;
+    font-size: large;
+}
 
-        body {
-            padding-left: 11%;
-        }
+.navbar p {
+    color: darkgray;
+    padding-left: 15%;
+}
+
+/* Стили панели навигации при наведении мышью */
+.navbar p:hover {
+    color: aliceblue;
+}
+
+body {
+    padding-left: 11%;
+}
+
+header, footer, body, .video-container {
+    background-color: linen;
+}
+
+<style >
+/* Свойства стиля элемента. Подробнее о них - в модуле по CSS */
+.block {
+    border: 2px solid black;
+    background-color: azure;
+    padding: 10px;
+}
+
+</style >
