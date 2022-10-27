@@ -11,8 +11,13 @@
 }
 
 header {
+    color: black;
     padding-left: 1%;
     padding-top: 1.2%;
+}
+
+#header-index {
+    color: #44453f;
 }
 
 footer {
@@ -21,6 +26,7 @@ footer {
     font-size: medium;
     line-height: 0.66em;
     color: dimgrey;
+    padding-left: 1%;
 }
 
 aside {
@@ -56,4 +62,11 @@ header, footer, body, .video-container {
 
 .site-search:hover {
     background-color: yellow;
+}
+
+/* Свойства стиля элемента. Подробнее о них - в модуле по CSS */
+.bordered {
+    border: 2px solid black;
+    background-color: azure;
+    padding: 10px;
 }
