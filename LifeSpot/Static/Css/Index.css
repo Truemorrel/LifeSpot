@@ -29,6 +29,8 @@ header,footer,body,.video-container{
 /* Глобальные стили для хедеров на всём сайте */
 header{
     color: black;
+header {
+    color: black;
     padding-left: 1%;
     padding-top: 1.2%;
 }
@@ -38,14 +40,12 @@ header{
     color: #44453f;
 }
 
-/* Стили футера */
 footer {
     position: absolute;
     bottom: 0;
     font-size: medium;
     color: dimgrey;
-    line-height: 66%;
-    padding-left: 1%; 
+    padding-left: 1%;
 }
 
 aside{
@@ -75,6 +75,6 @@ input {
     outline: none;
 }
 
-input:focus {
-    border: 2px solid dimgrey;
+.site-search:hover {
+    background-color: yellow;
 }
