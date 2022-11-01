@@ -17,7 +17,8 @@ header, footer, body, .video-container {
     padding-top: 1%;
 }
 
-.navbar {
+/* Стили панели навигации */
+.navbar p{
     color: darkgray;
     padding-left: 15%;
 }
@@ -27,8 +28,9 @@ header {
     padding-left: 1%;
     padding-top: 1.2%;
 }
-
-#header-index {
+/* Стиль хедера для главной страницы имеет приоритет, 
+так как используется селектор по идентификатору */
+#header-index{
     color: #44453f;
 }
 
