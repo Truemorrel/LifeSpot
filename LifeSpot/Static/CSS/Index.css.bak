@@ -1,18 +1,6 @@
-﻿/* Комбинированный селектор - применяется ко всем элементам */
-header,footer,aside,body,.navbar,.video-container{
-    font-family: "Helvetica 65 Medium", sans-serif;
-}
-
-header, footer, body, .video-container {
-    background-color: linen;
-}
-
-
-
-/* Простые селекторы*/
+﻿/* Простые селекторы*/
 .video-container {
     display: inline-block;
-	margin-top: 0.5em;
     padding-left: 1%;
     padding-top: 1%;
 }
@@ -68,18 +56,8 @@ body {
     padding-left: 11%;
 }
 
-a{
-    text-decoration: none;
-}
-
-input {
-    border: 2px solid darkgrey;
-    border-radius: 2px;
-    outline: none;
-}
-
-input:focus {
-    border: 2px solid dimgrey;
+header, footer, body, .video-container {
+    background-color: linen;
 }
 
 .site-search:hover {
@@ -90,6 +68,5 @@ input:focus {
 .bordered {
     border: 2px solid black;
     background-color: azure;
-    width: 30%;
     padding: 10px;
 }
