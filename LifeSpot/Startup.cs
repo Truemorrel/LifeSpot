@@ -29,15 +29,20 @@ namespace LifeSpot
             {
                 endpoints.MapGet("/", async context =>
                 {
+                    // Путь до страницы нашего сайта
                     var viewPath = Path.Combine(Directory.GetCurrentDirectory(), "Views", "index.html");
+                    // Загружаем страницу сайта
                     var html = await File.ReadAllTextAsync(viewPath);
+                    // Сервер возвращает ответ
                     await context.Response.WriteAsync(html);
                 });
-                endpoints.MapGet("Static/CSS/index.css", async context =>
+                
+                endpoints.MapGet("/Static/CSS/index.css", async context =>
                 {
-                    var viewPath = Path.Combine(Directory.GetCurrentDirectory(), "Static", "CSS", "index.css");
-                    var html = await File.ReadAllTextAsync(viewPath);
-                    await context.Response.WriteAsync(html);
+                    // по аналогии со страницей Index, настроим на нашем сервере путь до страницы со стилями, чтобы браузер знал, откуда их загружать
+                    var cssPath = Path.Combine(Directory.GetCurrentDirectory(), "Static", "CSS", "index.css");
+                    var css = await File.ReadAllTextAsync(cssPath);
+                    await context.Response.WriteAsync(css);
                 });
             });
         }
