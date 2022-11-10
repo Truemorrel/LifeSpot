@@ -18,18 +18,29 @@
         <!--Параграф-->
         <p class="curDate">Покажем, что происходит прямо сейчас: </p>
         <div class="bordered">
-            <label>Название видео: <input class="siteSearch" type="text" name="videoname" placeholder="город"></label>
-            <input type="submit" value="Найти" />
+            <label>
+                Название видео:
+                <input type="text" oninput="let inputString = document.getElementsByTagName('input')[0].value.toLowerCase();
+                       let elements=document.getElementsByClassName('video-container');
+                       for (let i=0; i <= elements.length; i++)
+                {
+                debugger
+                let videoText = elements[i].querySelector('.video-title').innerText;
+                if (!videoText.toLowerCase().includes(inputString.toLowerCase())) {
+                elements[i].style.display = 'none';
+                } else {
+                elements[i].style.display = 'inline-block';
+                }
+                }
+
+                " size="50%">
+            </label>
         </div>
     </header>
 
     <!--Сайд-бар страницы-->
-    <aside id="sidebar">
-        <div class="navbar">
-            <a href="/"><p>Все трансляции</p></a>
-            <a href="/"><p>О проекте</p></a>
-        </div>
-    </aside>    <div class="video-container">
+    <!--SIDEBAR-->
+    <div class="video-container">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/rG13FY2ytno" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <h3 class="video-title">Санкт-Петербург, Невский проспект</h3>
     </div>
@@ -41,12 +52,10 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/JplMzss6_YE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <h3 class="video-title">Лондон, движущаяся камера из окна автобуса</h3>
     </div>
-    <script  defer type="text/javascript" src="/Static/JavaScript/Index.js"></script>
+    <script defer type="text/javascript" src="../Static/JavaScript/index.js">*
+    </script>
 </body>
 <!--Футер страницы находится под основной частью (body)-->
+<!--FOOTER-->
 </html>
 
-<footer>
-    <h1>LifeSpot - все права защищены</h1>
-    <p>Связаться с нами: contact@lifespot.ru</p>
-</footer>
