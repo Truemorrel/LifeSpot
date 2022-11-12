@@ -1,18 +1,17 @@
-﻿let currentDate = document.querySelector('.curDate');
-
-let session = new Map();
-
-currentDate.textContent += new Date().toLocaleDateString();
+﻿function dateInline() {
+    document.querySelector('.curDate').textContent += new Date().toLocaleDateString();
+}
 
 setTimeout(() => alert('Подпишитесь на наш сайт!'), 60000);
 
-let sessionLog = function logSession(session) {
+let session = new Map();
+function sessionLog(session) {
     for (let result of session) {
         console.log(result);
     }
 }
 
-var handleSession = function () {
+function handleSession() {
     session.set("userAgent", window.navigator.userAgent);
     session.set("age", prompt("Пожалуйста, введите ваш возраст?"));
 }
@@ -31,10 +30,8 @@ function checkAge() {
     }
 }
 
-let contentFilter = function filterContent(inputParseFunction) {
-
-    let elements = document.getElementsByClassName('video-container');
-
+function contentFilter(inputParseFunction) {
+    let elements = document.getElementsByClassName('video-container')
     for (let i = 0; i <= elements.length; i++) {
         let videoText = elements[i].querySelector('.video-title').innerText;
         if (!videoText.toLowerCase().includes(inputParseFunction())) {
@@ -43,43 +40,6 @@ let contentFilter = function filterContent(inputParseFunction) {
             elements[i].style.display = 'inline-block';
         }
     }
-};
-
-/*
-* Запишем отзыв на страницу
-*
-* */
-const writeReview = review => {
-    document.getElementsByClassName('reviews')[0].innerHTML += '    <div class="review-text">\n' +
-        `<p> <i> <b>${review['userName']}</b>  ${review['date']}</i></p>` +
-        `<p>${review['comment']}</p>` +
-        '</div>';
 }
-/*
-* Запросим пользовательский ввод
-* и сохраним отзыв в объект
-*
-* */
-function getReview() {
-    // Создадим объект
-    let review = {}
 
-    // Сохраним свойство имени
-    review["userName"] = prompt("Как вас зовут ?")
-    if (review["userName"] == null) {
-        return
-    }
-
-    // Сохраним текст отзыва
-    review["comment"] = prompt("Напишите свой отзыв")
-    if (review["comment"] == null) {
-        return
-    }
-
-    // Сохраним текущее время
-    review["date"] = new Date().toLocaleString()
-
-    // Добавим на страницу
-    writeReview(review)
-}
 
